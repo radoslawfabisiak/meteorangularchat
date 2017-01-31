@@ -1,0 +1,118 @@
+/* CSS declarations go here */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+/*RWD*/
+@media(max-width: 1830px) {
+  /*Komunikator*/
+  .chat-container .friends-online .panel-body p.chat-user {
+    padding-right: 0px;
+  }
+  .chat-container .friends-online .panel-body p.chat-user span.online {
+    right: -10px;
+  }
+}
+
+@media(max-width: 1670px) {
+  /*Komunikator*/
+  .chat-container .friends-online .panel-body p.chat-user {
+    font-size: 12px;
+  }
+  .chat-container .friends-online .panel-body .col-lg-3 {
+    padding-left:0px;
+  }
+  .chat-container .friends-online .panel-body .col-lg-9 {
+    padding-left:0px;
+  }
+  .chat-container .chat-window .chat-panel .panel-body .one-message {
+    font-size: 12px;
+  }
+  .chat-container .chat-window .chat-panel .panel-body .col-lg-2 {
+    padding-left:5px;
+    padding-right:5px;
+  }
+}
+
+@media(max-width: 1370px) {
+  .chat-container .friends-online .panel-body p.chat-user {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .chat-container .friends-online .panel-body p.chat-user span.online {
+    top: 5px;
+  }
+  .chat-container .chat-window .chat-panel .panel-body .one-message {
+    font-size: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .chat-container .chat-window .chat-panel .panel-body .one-message p {
+    font-size: 12px;
+  }
+  .chat-container .chat-window .chat-panel .panel-body .one-message p.date {
+    font-size: 8px;
+  }
+  .chat-container .friends-online .panel-heading h3.panel-title {
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .chat-container .friends-online .panel-body p.chat-user {
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .chat-container .friends-online .panel-body p.chat-user span.online i {
+    font-size: 8px;
+  }
+  .chat-container .friends-online .panel-body p.chat-user span.online {
+    top: 5px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .chat-container .friends-online .panel-body .col-lg-3 {
+    padding-right: 3px;
+  }
+  /*.chat-container .friends-online .panel-body p.chat-user {
+    font-size: 10px;
+  }
+  .chat-container .friends-online .panel-body p.chat-user span.online {
+    right: -20px;
+  }*/
+}
+
+@media(max-width: 1024px) {
+  .chat-container .friends-online .panel-heading {
+    padding-left: 2px !important;
+  }
+  .chat-container .friends-online .panel-heading h3.panel-title {
+    font-size: 10px;
+  }
+}
+
+@media(max-width: 991px) {
+  .chat-container .friends-online .panel-body p.chat-user {
+    padding-top: 40px;
+    font-size: 16px;
+  }
+  .chat-container .friends-online .panel-body p.chat-user span.online {
+    top: 40px;
+  }
+
+}
+
+@media(max-width: 767px) {
+  .chat-container .friends-online .panel-heading h3.panel-title {
+    font-size: 12px;
+  }
+  .chat-container .friends-online .panel-body p.chat-user {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+  }
+  .chat-container .friends-online .panel-body p.chat-user span.online {
+    top: 25px;
+  }
+}

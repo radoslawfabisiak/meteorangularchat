@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin/node',
+1 verbose cli   '/Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'test:watch' ]
+2 info using npm@3.10.5
+3 info using node@v4.4.7
+4 verbose run-script [ 'pretest:watch', 'test:watch', 'posttest:watch' ]
+5 info lifecycle pizza@~pretest:watch: pizza@
+6 silly lifecycle pizza@~pretest:watch: no script for pretest:watch, continuing
+7 info lifecycle pizza@~test:watch: pizza@
+8 verbose lifecycle pizza@~test:watch: unsafe-perm in lifecycle true
+9 verbose lifecycle pizza@~test:watch: PATH: /Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/bin/node-gyp-bin:/Applications/MAMP/htdocs/custom/meteor/chat/node_modules/.bin:/Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin:/Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin:/Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/mongodb/bin
+10 verbose lifecycle pizza@~test:watch: CWD: /Applications/MAMP/htdocs/custom/meteor/chat
+11 silly lifecycle pizza@~test:watch: Args: [ '-c', 'meteor test --driver-package sanjo:jasmine' ]
+12 silly lifecycle pizza@~test:watch: Returned: code: 254  signal: null
+13 info lifecycle pizza@~test:watch: Failed to exec test:watch script
+14 verbose stack Error: pizza@ test:watch: `meteor test --driver-package sanjo:jasmine`
+14 verbose stack Exit status 254
+14 verbose stack     at EventEmitter.<anonymous> (/Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/lib/utils/lifecycle.js:242:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (/Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:827:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid pizza@
+16 verbose cwd /Applications/MAMP/htdocs/custom/meteor/chat
+17 error Darwin 15.5.0
+18 error argv "/Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin/node" "/Users/radek/.meteor/packages/meteor-tool/.1.4.0-1.1hr19rn++os.osx.x86_64+web.browser+web.cordova/mt-os.osx.x86_64/dev_bundle/bin/npm" "run" "test:watch"
+19 error node v4.4.7
+20 error npm  v3.10.5
+21 error code ELIFECYCLE
+22 error pizza@ test:watch: `meteor test --driver-package sanjo:jasmine`
+22 error Exit status 254
+23 error Failed at the pizza@ test:watch script 'meteor test --driver-package sanjo:jasmine'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the pizza package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     meteor test --driver-package sanjo:jasmine
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs pizza
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls pizza
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

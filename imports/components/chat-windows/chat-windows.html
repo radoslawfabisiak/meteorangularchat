@@ -1,0 +1,125 @@
+<div class="row chat-container">
+  <div class="col-md-8 col-lg-10 col-xs-6 col-sm-6 okna-czatu">
+    <div
+      id="chat{{$index}}"
+      ng-repeat="chat in chatWindows.openChats"
+      class="col-md-6 col-lg-3 col-sm-12 col-xs-12 pull-right chat-window">
+      <div class="panel panel-default chat-panel">
+        <div class="panel-heading">
+          <button
+            class="btn btn-default pull-right" ng-click="chatWindows.closeChat(chat)">
+            <i class="fa fa-2x fa-times" aria-hidden="true"></i>
+          </button>
+          <button
+            class="btn btn-default pull-right maximize" ng-click="chatWindows.maximize($index)">
+            <i class="fa fa-window-maximize" aria-hidden="true"></i>
+          </button>
+          <button
+            class="btn btn-default pull-right minimize" ng-click="chatWindows.minimize($index)">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+          </button>
+          <h3>
+            {{chat.user1._id == chatWindows.user._id ? chat.user2.username : chat.user1.username}}
+          </h3>
+        </div>
+        <div
+          class="panel-body"
+          id="{{$index}}chat-scroll"
+          ng-init="chatWindows.scrollChatWindow()">
+          <div
+            class="row"
+            ng-repeat="message in chat.messages"
+            ng-class="message.sender._id == chatWindows.user._id ? 'my-message' : ''">
+            <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 zdjecie">
+              <img
+                ng-src="{{message.sender.profilePhoto}}" class="comunicator-img"/>
+            </div>
+            <div class="col-md-10 col-xs-10 col-sm-10 col-lg-10 tresc">
+              <div class="one-message">
+                <strong>{{message.sender.username}}</strong>
+                <p ng-bind-html="message.body"></p>
+                <div ng-if="message.photo">
+                  <img
+                    class="photo-attachement"
+                    ng-src="{{message.photo}}" />
+                </div>
+                <p class="date pull-right">
+                  {{message.date | date: 'HH:mm dd.MM.yyyy'}}
+                </p>
+                <div class="clearfix"></div>
+                <!-- End message photo -->
+              </div>
+            </div>
+          </div>
+          <span class="unread-info">
+            {{chat.user2._id == chatWindows.user._id ? chat.user1.lastReceived : chat.user2.lastReceived}}
+          </span>
+          <div class="clearfix"></div>
+        </div>
+        <div class="panel-footer">
+            <div class="input-group">
+              <input
+                type="text"
+                id="{{$index}}input-message"
+                class="form-control"
+                ng-model="textMessage[$index]"
+                placeholder="Type your message...">
+              <div class="input-group-btn">
+                <button
+                  class="btn btn-default" ng-click="chatWindows.sendMessage(chat, textMessage[$index], $index); textMessage = ''"
+                  type="button">
+                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="other-features">
+              <label>
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                <input
+                  id="{{$index}}photoFile"
+                  style="display:none"
+                  type="file"
+                  name="upload"
+                  class="pull-left"/>
+              </label>
+              <div class="btn-group dropup">
+                <a
+                  href
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  ng-click="chatWindows.showEmoticons();
+                  actualChatIndex = $index">
+                  <i class="fa fa-smile-o" aria-hidden="true"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li
+                    style="float:left;"
+                    ng-repeat="emot in chatWindows.emoticons" ng-bind-html="emot.code" ng-click="chatWindows.selectEmoticon(emot, actualChatIndex)">
+                  </li>
+                </ul>
+              </div>
+
+              <div class="btn-group dropup pull-right">
+                <button
+                  type="button"
+                  class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false">
+                  <i class="fa fa-cog" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a ui-sref="logged.talk({id: chat._id})">
+                      See full chat
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- End chat window -->
+  </div>
+</div>

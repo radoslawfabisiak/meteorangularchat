@@ -1,0 +1,14 @@
+talk{
+  .messages-container{
+    overflow:auto;
+    height:80vh;
+    .talk-message{
+      margin-bottom:20px;
+    }
+    .not-my-message{
+      .col-md-2{
+        float:right;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div ui-sref="logged.talk({id: message.talkId})" class="row message" ng-repeat="message in messagesList.talks">
+  <div class="col-md-3">
+      <img class="img-responsive" ng-src="{{message.with.profilePhoto}}">
+  </div>
+  <div class="col-md-9">
+    <p><strong>{{message.with.username}}</strong> <span ng-if="message.with.online" class="online"><i class="fa fa-circle" aria-hidden="true"></i></span></p>
+    <p ng-bind-html="message.lastMessage | limitTo: 100"></p>
+  </div>
+</div>

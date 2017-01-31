@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Talk with {{talk.talk.with}}</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <messages-list></messages-list>
+    </div>
+    <div class="col-md-8">
+      <div class="panel panel-default messages-container">
+        <div class="panel-body">
+          <div class="row talk-message" ng-repeat="message in talk.talk.messages" ng-class="message.sender._id != talk.user ? 'not-my-message' : ''">
+            <div class="col-md-2">
+              <img ng-src="{{message.sender.profilePhoto}}" class="img-responsive img-circle" />
+            </div>
+            <div class="col-md-10">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+                    <p ng-bind-html="message.body"></p>
+                    <small class="pull-right">{{message.date | date}}</small>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
